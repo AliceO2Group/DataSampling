@@ -9,9 +9,9 @@
 // boost
 #include <boost/program_options.hpp>
 // datasampling
-#include "datasampling/FileSampler.h"
-#include "datasampling/Version.h"
-#include "datasampling/DataBlockProducer.h"
+#include "DataSampling/FileSampler.h"
+#include "DataSampling/Version.h"
+#include "DataSampling/DataBlockProducer.h"
 
 using namespace std;
 namespace po = boost::program_options;

@@ -3,8 +3,8 @@
 /// \author  Barthelemy von Haller
 ///
 
-#include <DataBlock.h>
-#include "DataBlockProducer.h"
+#include <DataFormat/DataBlock.h>
+#include "DataSampling/DataBlockProducer.h"
 #include <fstream>
 
 namespace AliceO2 {

@@ -3,7 +3,7 @@
 /// \author  Barthelemy von Haller
 ///
 
-#include "MockSampler.h"
+#include "DataSampling/MockSampler.h"
 
 namespace AliceO2 {
 namespace DataSampling {

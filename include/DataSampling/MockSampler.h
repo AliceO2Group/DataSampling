@@ -6,7 +6,7 @@
 #ifndef DATA_SAMPLING_MOCKSAMPLER_H
 #define DATA_SAMPLING_MOCKSAMPLER_H
 
-#include <DataBlock.h>
+#include <DataFormat/DataBlock.h>
 #include "SamplerInterface.h"
 #include "DataBlockProducer.h"
 

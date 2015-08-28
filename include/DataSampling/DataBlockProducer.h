@@ -6,7 +6,7 @@
 #ifndef DATA_SAMPLING_DATABLOCKPRODUCER_H
 #define DATA_SAMPLING_DATABLOCKPRODUCER_H
 
-#include <DataBlock.h>
+#include <DataFormat/DataBlock.h>
 
 #include <iostream>
 #include <random>

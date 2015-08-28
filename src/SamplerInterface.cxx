@@ -3,7 +3,7 @@
 /// \author Barthelemy von Haller
 ///
 
-#include "SamplerInterface.h"
+#include "DataSampling/SamplerInterface.h"
 
 using namespace std;
 

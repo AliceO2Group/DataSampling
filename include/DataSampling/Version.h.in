@@ -8,6 +8,7 @@
 #define ALICEO2_DATASAMPLING_VERSION_H
 
 #include <string>
+#include <sstream>
 
 namespace AliceO2 {
 namespace DataSampling {
@@ -50,23 +51,45 @@ namespace DataSampling {
 /// Information about the current DataSampling version.
 class Version {
 public:
-  /// \return the current major version of DataSampling.
-  static int getMajor();
+  /// @return the current major version of DataSampling.
+  static int getMajor()
+  {
+    return DATASAMPLING_VERSION_MAJOR;
+  }
 
-  /// \return the current minor version of DataSampling.
-  static int getMinor();
+  /// @return the current minor version of DataSampling.
+  static int getMinor()
+  {
+    return DATASAMPLING_VERSION_MINOR;
+  }
 
-  /// \return the current patch level of DataSampling.
-  static int getPatch();
+  /// @return the current patch level of DataSampling.
+  static int getPatch()
+  {
+    return DATASAMPLING_VERSION_PATCH;
+  }
 
-  /// \return the current DataSampling version (MM.mm.pp).
-  static std::string getString();
+  /// @return the current DataSampling version (MM.mm.pp).
+  static std::string getString()
+  {
+    std::ostringstream version;
+    version << DATASAMPLING_VERSION_MAJOR << '.' << DATASAMPLING_VERSION_MINOR << '.' << DATASAMPLING_VERSION_PATCH;
+    return version.str();
+  }
 
-  /// \return the SVN revision.
-  static std::string getRevision();
+  /// @return the SVN revision.
+  static std::string getRevision()
+  {
+    return DATASAMPLING_VCS_REVISION;
+  }
 
-  /// \return the current DataSampling version plus the SVN revision (MM.mm.pp.rev).
-  static std::string getRevString();
+  /// @return the current DataSampling version plus the SVN revision (MM.mm.pp.rev).
+  static std::string getRevString()
+  {
+    std::ostringstream version;
+    version << getString() << '.' << DATASAMPLING_VCS_REVISION;
+    return version.str();
+  }
 };
 }
 }

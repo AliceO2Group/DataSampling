@@ -3,7 +3,7 @@
 /// \author Barthelemy von Haller
 ///
 
-#include "FileSampler.h"
+#include "DataSampling/FileSampler.h"
 
 #include <fstream>
 #include <memory.h>

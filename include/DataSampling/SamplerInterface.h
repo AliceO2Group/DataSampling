@@ -17,7 +17,7 @@
 #include <boost/preprocessor/seq/size.hpp>
 #include <boost/preprocessor/seq/seq.hpp>
 
-#include <DataBlock.h>
+#include <DataFormat/DataBlock.h>
 
 namespace AliceO2 {
 namespace DataSampling {
