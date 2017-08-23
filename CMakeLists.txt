@@ -24,7 +24,6 @@ project(DataSampling)
 # Load some basic macros which are needed later on
 include(O2Utils)
 include(DataSamplingDependencies)
-include(O2)
 
 # Set the default build type to "RelWithDebInfo"
 if (NOT CMAKE_BUILD_TYPE)
@@ -149,10 +148,3 @@ O2_GENERATE_TESTS(
         TEST_SRCS ${TEST_SRCS}
 )
 
-# TODO RECONSIDER THE THINGS BELOW AFTER EXTRACTION TO ITS OWN REPO
-# Make sure we tell the topdir CMakeLists that we exist (if build from topdir)
-get_directory_property(hasParent PARENT_DIRECTORY)
-if (hasParent)
-    set(PROJECT_${PROJECT_NAME} true PARENT_SCOPE)
-endif ()
-include(PackageConfigurator)
