@@ -47,16 +47,14 @@ FairInjector::~FairInjector()
 void cleanupCallback(void *data, void *object)
 {
   if ((object!=nullptr)&&(data!=nullptr)) {
-    DataBlockContainerReference *ptr=(DataBlockContainerReference *)object;
+    auto *ptr=(DataBlockContainerReference *)object;
     delete ptr;
   }
 }
 
 void cleanupHeader(void *data, void *object)
 {
-  if(data) {
-    delete data;
-  }
+  delete data;
 }
 
 int FairInjector::injectSamples(DataSetReference dataSetReference)
@@ -79,7 +77,7 @@ int FairInjector::injectSamples(DataSetReference dataSetReference)
       break;
     }
   }
-  DataBlockHeaderBase *endOfMessage = new DataBlockHeaderBase();
+  auto *endOfMessage = new DataBlockHeaderBase();
   endOfMessage->blockType = H_EOM;
   endOfMessage->headerSize = 0x60; // just the header eom -> 96 bits
   FairMQMessagePtr msgEom(NewMessage((void *) endOfMessage, (endOfMessage->headerSize), cleanupHeader));

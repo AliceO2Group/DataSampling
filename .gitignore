@@ -3,3 +3,4 @@
 .project
 *~
 .idea
+cmake-build-*
