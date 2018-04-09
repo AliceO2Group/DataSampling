@@ -26,6 +26,7 @@ o2_define_bucket(
   ${Boost_FILESYSTEM_LIBRARY}
   ${Common_LIBRARIES}
   ${InfoLogger_LIBRARIES}
+  pthread
 
   SYSTEMINCLUDE_DIRECTORIES
   ${Boost_INCLUDE_DIRS}
