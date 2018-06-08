@@ -17,7 +17,8 @@ FairSampler::FairSampler() : mDataSet(nullptr)
   FairMQChannel histoChannel;
   histoChannel.UpdateType("sub");
   histoChannel.UpdateMethod("connect");
-  histoChannel.UpdateAddress("tcp://localhost:5558");
+//  histoChannel.UpdateAddress("tcp://localhost:5558");
+  histoChannel.UpdateAddress("tcp://localhost:26525");
   histoChannel.UpdateSndBufSize(10000);
   histoChannel.UpdateRcvBufSize(10000);
   histoChannel.UpdateRateLogging(0);

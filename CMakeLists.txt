@@ -32,6 +32,10 @@ if (NOT CMAKE_BUILD_TYPE)
             STRING "Choose the type of build, options are: Debug Release RelWithDebInfo MinSizeRel Coverage."
             FORCE)
 endif (NOT CMAKE_BUILD_TYPE)
+set(CMAKE_BUILD_TYPE "Debug"
+        CACHE
+        STRING "Choose the type of build, options are: Debug Release RelWithDebInfo MinSizeRel Coverage."
+        FORCE)
 
 # Set the version number of your project here (format is MAJOR.MINOR.PATCHLEVEL - e.g. 1.0.0)
 set(VERSION_MAJOR "0")
